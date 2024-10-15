@@ -1,22 +1,20 @@
 package net.javaguides.springboot_kafka_tutorial.controller;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import net.javaguides.springboot_kafka_tutorial.kafka.JsonKafkaProducer;
+import net.javaguides.springboot_kafka_tutorial.kafka.messageKafkaProducer;
 
 @RestController
 @RequestMapping("/api/v1/kafka")
 public class MessageController {
- private JsonKafkaProducer kafkaProducer;
+ private messageKafkaProducer kafkaProducer;
 
 
 
-    public MessageController(JsonKafkaProducer kafkaProducer) {
+    public MessageController(messageKafkaProducer kafkaProducer) {
         this.kafkaProducer = kafkaProducer;
     }
 
